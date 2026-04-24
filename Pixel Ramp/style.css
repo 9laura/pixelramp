@@ -57,7 +57,66 @@ body {
   font-size: 15px;
 }
 
-.config,
+.config {
+  background: white;
+  color: #190b45;
+  border: 4px solid #42d8ff;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 6px 6px 0 #160735;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.config-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.board-area {
+  position: relative;
+  width: fit-content;
+}
+
+.board-line {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  image-rendering: pixelated;
+  filter: drop-shadow(4px 4px 0 rgba(0,0,0,.35));
+}
+
+/* escada da casa 64 até a 83 */
+.ladder-64-83 {
+  width: 170px;
+  left: 365px;
+  top: 180px;
+  transform: rotate(24deg);
+}
+
+/* exemplo de cobra */
+.snake-108-89 {
+  width: 180px;
+  left: 430px;
+  top: 20px;
+  transform: rotate(-20deg);
+}
+
+.config-row label {
+  font-weight: bold;
+}
+
+.config-row select {
+  min-width: 160px;
+}
+
+.config button {
+  align-self: flex-start;
+}
+
 .hud,
 .message {
   background: white;
@@ -208,6 +267,56 @@ button:disabled {
   filter: drop-shadow(2px 2px 0 rgba(0,0,0,.45));
 }
 
+.modal-evento {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 5, 45, 0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-evento.active {
+  display: flex;
+}
+
+.modal-card {
+  width: min(520px, 90vw);
+  background: #e6e6e6;
+  color: #23134f;
+  border: 4px solid #2dd4ff;
+  padding: 22px;
+  box-shadow: 8px 8px 0 #120a35;
+  font-size: 18px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  font-size: 24px;
+}
+
+.topo-imagem {
+  width: 100%;
+  max-width: 680px; /* acompanha largura do tabuleiro */
+  border: 4px solid #42d8ff;
+  box-shadow: 6px 6px 0 #160735;
+  background: #7442c8;
+}
+
+.topo-imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
 @media (max-width: 1100px) {
   .game-layout {
     flex-direction: column;
