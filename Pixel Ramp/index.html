@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Ramp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="game">
+    <section class="game-layout">
+
+      <div class="lado-tabuleiro">
+        <section class="board-wrap">
+          <div class="board" id="board"></div>
+        </section>
+
+        <section class="message" id="messageBox">
+          Clique em começar jogo.
+        </section>
+      </div>
+
+      <div class="lado-ui">
+
+        <section class="topo">
+          <h1>PIXEL RAMP</h1>
+          <p>Laura, Flor & Lucas Robson</p>
+        </section>
+
+        <section class="config">
+          <h2>Escolha os jogadores</h2>
+
+          <label>
+            Quantidade:
+            <select id="playerCount">
+              <option value="3">3 jogadores</option>
+              <option value="4">4 jogadores</option>
+              <option value="5">5 jogadores</option>
+              <option value="6">6 jogadores</option>
+              <option value="7">7 jogadores</option>
+              <option value="8">8 jogadores</option>
+              <option value="9">9 jogadores</option>
+              <option value="10">10 jogadores</option>
+            </select>
+          </label>
+
+          <button id="startBtn">Começar jogo</button>
+        </section>
+
+        <section class="hud">
+          <p><strong>Jogador atual:</strong> <span id="currentPlayer">-</span></p>
+          <p><strong>Dado:</strong> <span id="diceResult">-</span></p>
+          <button id="rollBtn" disabled>Jogar dado</button>
+        </section>
+
+        <section class="players" id="playersList"></section>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
